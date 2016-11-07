@@ -5,35 +5,39 @@ public class BubbleSort {
      * Input: Potentially unsorted array of integers (int[])
      * Output: Sorted array of integers (int[])
      */
-    public static int[] sort(int[] input) {
+    public static int[] sort(int[] data) {
 
         /*
          * Initialise the variables
          */
-        int n;
+        int n,
+            lowerBound,
+            upperBound;
 
         /*
          * Assign values to the variables
          */
-        n = input.length;
+        n = data.length; // length of the array
+        lowerBound = 0; // default lower bound of the search field
+        upperBound = n - 1; // default upper bound of the search field
 
         /*
          * Perform sort
          * Check for each element whether it is bigger than the following one. If this is the case,
-         * change them. Repeat this process as many times as there are elements in the array.
+         * change them. Loop with this procedure as many times as there are elements through the array.
          */
         // Perform the sort n-1 times so that even the potential smallest element at the end can reach
         // its right place at the beginning.
-        for(int i = 0; i < n - 1; i++) {
+        for(int i = lowerBound; i < upperBound; i++) {
 
             // Loop through each element.
-            for(int j = 0; j < n - 1; j++) {
+            for(int j = lowerBound; j < upperBound; j++) {
 
                 // If the element is bigger than the following one, swap them around.
-                if(input[j] > input[j+1]) {
-                    int temp = input[j];
-                    input[j] = input[j+1];
-                    input[j+1] = temp;
+                if(data[j] > data[j+1]) {
+                    int temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
                 }
 
             }
@@ -43,7 +47,7 @@ public class BubbleSort {
         /*
          * Return sorted array.
          */
-        return input;
+        return data;
 
     }
 
