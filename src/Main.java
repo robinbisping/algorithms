@@ -10,11 +10,13 @@ public class Main {
         // int[] = BubbleSort.sort(input)
         // int[] = InsertionSort.sort(input)
         // int[] = SelectionSort.sort(input)
+        // int[] = QuickSort.initialise(input)
         // int = BinarySearch.search(searchedItem, input)
         // int = LinearSearch.search(searchedItem, input)
 
-        System.out.println(Arrays.toString(InsertionSort.sort(input)));
-        System.out.println(LinearSearch.search(searchedItem, input));
+        //System.out.println(Arrays.toString(QuickSort.initialise(input)));
+        //System.out.println("Merge: " + Arrays.toString(MergeSort.initialise(input)));
+        System.out.println(Arrays.toString(HeapSort.sort(input)));
 
     }
 

@@ -1,3 +1,0 @@
-- Maximum Subarray
-- Heap Sort
-- Merge Sort

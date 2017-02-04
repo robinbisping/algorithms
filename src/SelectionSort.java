@@ -43,9 +43,7 @@ public class SelectionSort {
 
             // If a smaller element than the element on the current position could have been found, swap them.
             if(pivot != i) {
-                int temp = data[i];
-                data[i] = data[pivot];
-                data[pivot] = temp;
+            	Utilities.swap(data, i, pivot);
             }
 
         }

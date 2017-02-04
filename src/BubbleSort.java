@@ -35,9 +35,7 @@ public class BubbleSort {
 
                 // If the element is bigger than the following one, swap them around.
                 if(data[j] > data[j+1]) {
-                    int temp = data[j];
-                    data[j] = data[j+1];
-                    data[j+1] = temp;
+                	Utilities.swap(data, j, j+1);
                 }
 
             }

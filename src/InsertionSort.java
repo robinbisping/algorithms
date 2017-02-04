@@ -31,9 +31,7 @@ public class InsertionSort {
 
             // Find the element's right place.
             for(int j = i - 1; j >= lowerBound && data[j] > data[j+1]; j--) {
-                int temp = data[j];
-                data[j] = data[j+1];
-                data[j+1] = temp;
+            	Utilities.swap(data, j, j+1);
             }
 
         }
